@@ -10,4 +10,7 @@ export class User {
 
   @Column({ nullable: false, unique: true })
   email: string;
+
+  @Column({ name: 'image_url', nullable: true })
+  imageUrl: string;
 }

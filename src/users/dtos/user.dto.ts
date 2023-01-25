@@ -9,4 +9,7 @@ export class UserDto {
 
   @Expose()
   email: string;
+
+  @Expose()
+  imageUrl: string;
 }
