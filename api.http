@@ -1,10 +1,16 @@
 @base_url = http://localhost:3000
 
-####
+#### USERS ####
 POST {{base_url}}/auth/signup
 Content-Type: application/json
 
 {
   "name": "Rebeca",
-  "email": "rebeca@email.com"
+  "email": "rebeca@mail.com"
 }
+
+### Image uploads
+####
+POST {{base_url}}/auth/upload
+
+# pass on 'file' field
