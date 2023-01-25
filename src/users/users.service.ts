@@ -7,9 +7,13 @@ import { User } from './user.entity';
 export class UsersService {
   constructor(@InjectRepository(User) private repository: Repository<User>) {}
 
-  create(name: string, email: string) {
+  async create(name: string, email: string) {
     const user = this.repository.create({ name, email });
 
     return this.repository.save(user);
+  }
+
+  async find(email: string) {
+    return this.repository.find({ where: { email } });
   }
 }
